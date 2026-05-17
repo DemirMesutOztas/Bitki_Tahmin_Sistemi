@@ -1,0 +1,164 @@
+{
+    "version": 1,
+    "author": "Toprak Analiz",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "board-esp32-devkit-c-v4",
+            "id": "esp",
+            "top": 100,
+            "left": 200,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot1",
+            "top": -58.9,
+            "left": -0.2,
+            "attrs": {
+                "label": "pH"
+            }
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot2",
+            "top": -60,
+            "left": 110,
+            "attrs": {
+                "label": "Nem"
+            }
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot3",
+            "top": -60,
+            "left": 220,
+            "attrs": {
+                "label": "Azot"
+            }
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot4",
+            "top": -60,
+            "left": 330,
+            "attrs": {
+                "label": "Fosfor"
+            }
+        },
+        {
+            "type": "wokwi-potentiometer",
+            "id": "pot5",
+            "top": -60,
+            "left": 440,
+            "attrs": {
+                "label": "Potasyum"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "esp:TX",
+            "$serialMonitor:RX",
+            "",
+            []
+        ],
+        [
+            "esp:RX",
+            "$serialMonitor:TX",
+            "",
+            []
+        ],
+        [
+            "pot1:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "pot1:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "pot1:SIG",
+            "esp:34",
+            "orange",
+            []
+        ],
+        [
+            "pot2:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "pot2:GND",
+            "esp:GND.1",
+            "black",
+            []
+        ],
+        [
+            "pot2:SIG",
+            "esp:35",
+            "green",
+            []
+        ],
+        [
+            "pot3:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "pot3:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "pot3:SIG",
+            "esp:32",
+            "blue",
+            []
+        ],
+        [
+            "pot4:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "pot4:GND",
+            "esp:GND.2",
+            "black",
+            []
+        ],
+        [
+            "pot4:SIG",
+            "esp:33",
+            "purple",
+            []
+        ],
+        [
+            "pot5:VCC",
+            "esp:3V3",
+            "red",
+            []
+        ],
+        [
+            "pot5:GND",
+            "esp:GND.3",
+            "black",
+            []
+        ],
+        [
+            "pot5:SIG",
+            "esp:39",
+            "brown",
+            []
+        ]
+    ],
+    "dependencies": {}
+}
